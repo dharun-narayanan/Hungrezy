@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin signup Form</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:rgb(25, 25, 25)">
+	<img class="wave" src="images/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="images/bg.svg">
+		</div>
+		<div class="login-content">
+			<form>
+				<img src="images/avatar.svg">
+				<h2 class="title" style="color: white;">Hi Partner!!!</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Hotel Name</h5>
+           		   		<input type="text" class="input" id="hname">
+           		   </div>
+           		</div>
+				   <div class="input-div one">
+					<div class="i">
+							<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+							<h5>Location</h5>
+							<input type="text" class="input" id="loc">
+					</div>
+				 </div>
+                <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Email</h5>
+                            <input type="email" class="input" id="email">
+                    </div>
+                 </div>
+				 <div class="input-div one">
+					<div class="i">
+							<i class="fas fa-mobile"></i>
+					</div>
+					<div class="div">
+							<h5>Registration ID</h5>
+							<input type="text" class="input" id="regid">
+					</div>
+				 </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+					    <i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" id="password">
+            	   </div>
+            	</div>
+            	<a href="signinadmin.html">Already a partner?</a>
+            	<input type="submit" class="main-btn1" value="signup" id="signup">
+              
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main1.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+	import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	const firebaseConfig = {
+	  apiKey: "AIzaSyCan3sUwtdAwRIY3F9LfH-h5UXe5tDC1Ts",
+		authDomain: "hotel-ordering-system-d60d1.firebaseapp.com",
+		databaseURL: "https://hotel-ordering-system-d60d1-default-rtdb.firebaseio.com",
+		projectId: "hotel-ordering-system-d60d1",
+		storageBucket: "hotel-ordering-system-d60d1.appspot.com",
+		messagingSenderId: "111728405719",
+		appId: "1:111728405719:web:b76f8abd3058b913045492"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase(app);
+	const auth = getAuth();
+  
+  signup.addEventListener('click',(e) => {
+	e.preventDefault();
+	var hname = document.getElementById('hname').value;
+	var loc = document.getElementById('loc').value;
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	var regid = document.getElementById('regid').value;
+	
+	
+  
+	createUserWithEmailAndPassword(auth, email, password)
+	  .then((userCredential) => {
+	   // Signed in
+	   console.log("in") 
+		const user = userCredential.user;
+  
+		set(ref(database, 'admin/' + user.uid),{
+			hotelname: hname,
+			location: loc,
+			registrationid: regid,
+			email: email
+		})
+
+		
+  
+		alert('You are now one of our partners!');
+		// ...
+	  })
+	  .catch((error) => {
+		const errorCode = error.code;
+		const errorMessage = error.message;
+  
+		alert(errorMessage);
+	  // ..
+	  });
+	  console.log(email,password,username);
+  
+  });
+  const user = auth.currentUser;
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    //bla bla bla
+    // ...
+  } else {
+    // User is signed out
+    // ...
+    //bla bla bla
+  }
+});
+   
+  </script>
+</html>

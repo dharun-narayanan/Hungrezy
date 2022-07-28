@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hungrezy - Online Food Ordering</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom File's Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+    <!-- Navbar section -->
+    <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" class="img-fluid" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="home.html">Menu</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#offers">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#review">Review</a>
+                        </li>
+                        <li class="nav-item mt-3 mt-lg-0">
+                            <a class="main-btn" href="login.html">Order Online</a>
+                        </li>
+                        <li class="nav-item mt-3 mt-lg-0">
+                            <a class="main-btn1" href="signup.html">New User</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar section exit -->
+
+    <!-- Banner section -->
+    <section id="home" class="banner_wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center text-lg-start order-lg-1 order-2">
+                    <h1><span>Dining</span><br> On The Lake</h1>
+                    <p class="subhead">Food for the body is not enough. There must be food for the soul....
+                        Tell me what you eat, and I will tell you who you are......
+                        Strawberries are not berries, bananas are!!!!
+                        Mushrooms can never be overcooked......
+                    </p>
+
+                    <a class="main-btn mt-4" href="login.html">View Menu</a>
+                </div>
+                <div class="col-lg-7 text-center order-lg-2 order-1">
+                    <img src="images/Food-Banner1.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="row top-menu mt-5">
+                <div class="col-lg-3 col-sm-6  mb-4">
+                    <div class="card">
+                        <img src="./images/Menu/menu-1.jpg" alt="menu">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6  mb-4">
+                    <div class="card">
+                        <img src="./images/Menu/menu-2.jpg" alt="menu">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6  mb-4">
+                    <div class="card">
+                        <img src="./images/Menu/menu-3.jpg" alt="menu">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6  mb-4">
+                    <div class="card">
+                        <img src="./images/Menu/menu-4.jpg" alt="menu">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner section exit -->
+
+    <!-- About section -->
+    <section id="about" class="about_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 mb-4 mb-lg-0 order-lg-1 order-2">
+                    <div class="card rounded-0">
+                        <div class="card-body pt-5">
+                            <h3 class="rev">About US</h3>
+                             <p style="font-family: sans-serif;">Greetings, Welocme to Hungrezy, Here we provide Fast and Effective Food Ordering, LIKE NEVER SEEN BEFORE.
+                                    Enjoy your Experience with us, guarentiee a Happy Experience </p>
+
+                            <a href="#review" class="main-btn mt-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 mb-4 mb-lg-0 order-lg-2 order-1">
+                    <img src="images/about-img.png" class="img-fluid" alt="About Us">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- About section exit -->
+
+    <!-- menu section -->
+    <section id="menu" class="menu_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">01</span> Classic Menu</h3>
+                            <p class="fst-italic">Traditional food refers to food that are passed through 
+                                generations and refers to foods consumed over a long-term duration of civilization that have been passed through generations.</p>
+                            <a href="login.html" class="main-btn mt-4">Go for classics</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">02</span> Dinner Meals</h3>
+                            <p class="fst-italic">"The dinner hour is a sacred, happy time when everyone should be together and relaxed." ~ Julia Child.
+                                 Grab a pastry and enjoy your dinner with your loved ones in hungrezy!!!!</p>
+                            <a href="login.html" class="main-btn mt-4">Time for dinner</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">03</span> Fresh Food</h3>
+                            <p class="fst-italic">The term “fresh,” when used on the label of a food,suggests 
+                                that the food is unprocessed, and has not
+                                 been frozen or subjected to any form of thermal processing .</p>
+                            <a href="login.html" class="main-btn mt-4">Grab a freshy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">04</span> Pasta & Pizza</h3>
+                            <p class="fst-italic">Italianooooo.... Taste the best pasta and oozing cheesy pizzas made by the classic artists from Italy.</p>
+                            <a href="login.html" class="main-btn mt-4">Cheesy time</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">05</span> Vegan Dishes</h3>
+                            <p class="fst-italic">Wonder how many vegan dishes are there? Take a quick walk through the forest of vegan dishes.</p>
+                            <a href="login.html" class="main-btn mt-4">Vegan on the way</a>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body text-md-start text-center">
+                            <h3><span class="fst-italic">06</span> Chef's Special</h3>
+                            <p class="fst-italic">Taste the marked reciepes of great chef's all over the world with their signature dishes and cozzy toppings.</p>
+                            <a href="login.html"" class="main-btn mt-4">Today's special</a>
+                        </div>                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- menu section exit -->
+
+    <!-- Offer Section -->
+    <section id="offers" class="offers_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center mb-4">
+                    <h2>Best Offers</h2>
+                    <p class="subhead">Get the Best Deals out there.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-1.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">Double Burger</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-2.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">Farm House</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-3.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">Bacon Burger</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-4.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">Special Offer</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-5.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">Black Burger</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card rounded-0" style="background-image: url('./images/offers/offer-6.jpg')">
+                        <div class="offer-text bg-black bg-opacity-50">
+                            <h3 class="text-white">King Burger</h3>
+                            <h5>$8.50 <del class="fst-italic opacity-75">$10.50</del></h5>
+                            <a href="login.html" class="main-btn mt-3">Add TO Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- offer Section exit -->
+
+    <!-- review Section -->
+    <section id="review" class="review_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-7 col-sm-7">
+                    <div class="card rounded-0 bg-white p-2">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption">
+                                        <img src="./images/review/img-2.png">
+                                        <h3 class="rev">Pizza & Roll</h3>
+                                        <p style="font-family: sans-serif;">What I like most about this application is it's provide food at our doorstep at very good cost and 
+                                            quality. </p>
+                                        <a href="review.html" class="main-btn mt-4">More Reviews</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img src="./images/review/img-1.png">
+                                        <h3 class="rev">Burgers</h3>
+                                        <p style="font-family: sans-serif;">I like the service, its quick and reliable and you know that the food delivered will be fresh and hygienic. I usually pay with gpay as its quiet safe and reliable\</p>
+                                        <a href="review.html" class="main-btn mt-4">More Reviews</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img src="./images/review/img-1.png">
+                                        <h3 class="rev">Burgers</h3>
+                                        <p style="font-family: sans-serif;">If I want to order food quickly, I definitely use the Hungrezy app and order the most perfect food that I desire. Aslo, I get to read a lot of comprehensive public opinions about numerous hotels.</p>
+                                        <a href="review.html" class="main-btn mt-4">More Reviews</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- offer Section exit -->
+
+    <!-- Footer section -->
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <div class="footer-logo mb-3 mb-md-0">
+                        <img src="images/logo.png">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <ul
+                        class="list-unstyled d-flex justify-content-center justify-content-md-end justify-content-lg-center jus social-icon mb-3 mb-md-0">
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="copyright-text text-lg-start text-center mb-3 mb-lg-0">
+                        <p class="mb-0">Copyright © 2022 <a href="#">Hungrezy</a>. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+
+    <!-- Footer section exit -->
+
+    <!-- Bootstrap 5 JS CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js Link -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+

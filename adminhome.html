@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Dec Divyendh">
+    <meta name="author" content="Dev Divyendh">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Door Dining - Online Food Ordering</title>
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.min.css" />
+    <!-- Feather Icon-->
+    <link href="vendor/icons/feather.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/hstyle.css" rel="stylesheet">
+    <!-- Sidebar CSS -->
+    <link href="vendor/sidebar/demo.css" rel="stylesheet">
+</head>
+
+<body class="fixed-bottom-bar">
+    <header class="section-header">
+        <section class="header-main shadow-sm bg-black">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-1">
+                        <a href="index.html" class="brand-wrap mb-0">
+                            <img alt="#" class="img-fluid" src="images/logo.png">
+                        </a>
+                        <!-- brand-wrap.// -->
+                    </div>
+                    <div class="col-3 d-flex align-items-center m-none">
+                        <div class="dropdown mr-3">
+                            <a class="nav-text dropdown-toggle d-flex align-items-center py-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div><i class="feather-map-pin mr-2 bg-light rounded-pill p-2 icofont-size"></i></div>
+                                <div>
+                                    <p class="text-muted mb-0 small">Select Location</p>
+                                    Ettimadai Coimbatore...
+                                </div>
+                            </a>
+                            <div class="dropdown-menu p-0 drop-loc" aria-labelledby="navbarDropdown">
+                                <div class="osahan-country">
+                                    <div class="search_location bg-primary p-3 text-right">
+                                        <div class="input-group rounded shadow-sm overflow-hidden">
+                                            <div class="input-group-prepend">
+                                                <button class="border-0 btn btn-outline-secondary nav-text bg-card btn-block"><i class="feather-search"></i></button>
+                                            </div>
+                                            <input type="text" class="shadow-none border-0 form-control" placeholder="Enter Your Location">
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border-bottom">
+                                        <a href="home.html" class="text-decoration-none">
+                                            <p class="font-weight-bold text-primary m-0"><i class="feather-navigation"></i> Tamil Nadu, India</p>
+                                        </a>
+                                    </div>
+                                    <div class="filter">
+                                        <h6 class="px-3 py-3 bg-light pb-1 m-0 border-bottom">Choose your country</h6>
+                                        <div class="custom-control  border-bottom px-0 custom-radio">
+                                            <input type="radio" id="customRadio1" name="location" class="custom-control-input">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio1">Afghanistan</label>
+                                        </div>
+                                        <div class="custom-control  border-bottom px-0 custom-radio">
+                                            <input type="radio" id="customRadio2" name="location" class="custom-control-input" checked="">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio2">India</label>
+                                        </div>
+                                        <div class="custom-control  border-bottom px-0 custom-radio">
+                                            <input type="radio" id="customRadio3" name="location" class="custom-control-input">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio3">USA</label>
+                                        </div>
+                                        <div class="custom-control  border-bottom px-0 custom-radio">
+                                            <input type="radio" id="customRadio4" name="location" class="custom-control-input">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio4">Australia</label>
+                                        </div>
+                                        <div class="custom-control  border-bottom px-0 custom-radio">
+                                            <input type="radio" id="customRadio5" name="location" class="custom-control-input">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio5">Japan</label>
+                                        </div>
+                                        <div class="custom-control  px-0 custom-radio">
+                                            <input type="radio" id="customRadio6" name="location" class="custom-control-input">
+                                            <label class="custom-control-label py-3 w-100 px-3" for="customRadio6">China</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col.// -->
+                    <div class="col-8">
+                        <div class="d-flex align-items-center justify-content-end pr-5">
+                            <!-- search -->
+                            <a href="search.html" class="nav-text widget-header mr-4">
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-search h6 mr-2 mb-0"></i> <span>Search</span>
+                                </div>
+                            </a>
+                            <!-- offers -->
+                            <a href="offers.html" class="widget-header mr-4 text-white btn bg-primary m-none">
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-disc h6 mr-2 mb-0"></i> <span>Offers</span>
+                                </div>
+                            </a>
+                            <!-- signin -->
+                            <!-- <a href="login.html" class="widget-header mr-4 nav-text m-none">
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-user h6 mr-2 mb-0"></i> <span>Sign in</span>
+                                </div>
+                            </a> -->
+                            <!-- my account -->
+                            <div class="dropdown mr-4 m-none">
+                                <a href="#" class="dropdown-toggle nav-text py-3 d-block" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img alt="#" src="img/user2.png" class="img-fluid rounded-circle header-user mr-2 header-user"> My Profile
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="aprofile.html">My account</a>
+                                    <a class="dropdown-item" href="faq.html">Delivery support</a>
+                                    <a class="dropdown-item" href="contact-us.html">Contant us</a>
+                                    <a class="dropdown-item" href="terms.html">Term of use</a>
+                                    <a class="dropdown-item" href="privacy.html">Privacy policy</a>
+                                    <a class="dropdown-item" href="login.html">Logout</a>
+                                </div>
+                            </div>
+                            <!-- signin -->
+                            <a href="checkout.html" class="widget-header mr-4 nav-text">
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-shopping-cart h6 mr-2 mb-0"></i> <span>Cart</span>
+                                </div>
+                            </a>
+                            <a class="toggle" href="#">
+                                <span style="color: white;background: white;"></span>
+                            </a>
+                        </div>
+                        <!-- widgets-wrap.// -->
+                    </div>
+                    <!-- col.// -->
+                </div>
+                <!-- row.// -->
+            </div>
+            <!-- container.// -->
+        </section>
+        <!-- header-main .// -->
+    </header>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Admin</a>
+    <!-- <nav class="nav-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav> -->
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Admins at their work</h1>
+      <br>
+      <a href="index (4).html"><button id="b1">Want to update your menu?</button> </a>
+      <br>
+      <a href="http://127.0.0.1:5002"><button>Analyse Reviews</button></a>
+    </div>
+    
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>Admin roles</h2>
+        <p>admins take adminstration for websites maintance and data updation.  </p>
+      </div>&nbsp; &nbsp; &nbsp; &nbsp; 
+      <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; 2022 Developer</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref, update, onValue, get,child } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCan3sUwtdAwRIY3F9LfH-h5UXe5tDC1Ts",
+      authDomain: "hotel-ordering-system-d60d1.firebaseapp.com",
+      databaseURL: "https://hotel-ordering-system-d60d1-default-rtdb.firebaseio.com",
+      projectId: "hotel-ordering-system-d60d1",
+      storageBucket: "hotel-ordering-system-d60d1.appspot.com",
+      messagingSenderId: "111728405719",
+      appId: "1:111728405719:web:b76f8abd3058b913045492"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+  const fname = document.getElementById('fname');
+  const mobile = document.getElementById('mobile');
+
+  
+
+  function profile(){
+      const user = auth.currentUser;
+      console.log(user.uid);            
+  }
+
+  document.getElementById("profil").onload= function(){
+      const user = auth.currentUser;
+      const dbRef = ref(getDatabase());
+      onAuthStateChanged(auth,(user)=>{
+      if(user){
+          console.log(user.email);               
+          get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
+          if (snapshot.exists()) {
+              console.log(snapshot.val()); 
+              let fn = new String(snapshot.val().firstname);
+              let ln = new String(snapshot.val().lastname);
+              let mob = new String(snapshot.val().mobilenumber);
+              let em = new String(snapshot.val().email);
+              let nam = fn.concat(" ", ln);
+              console.log(fn); 
+              try{
+                  fname.innerHTML = nam.toUpperCase();
+                  mobile.innerHTML = mob;
+                  fname1.innerHTML = fn.toUpperCase();
+                  lname1.innerHTML = ln.toUpperCase();
+                  email1.innerHTML = em;
+              }catch{
+                  console.log("error");
+              }                                      
+          } else {
+              console.log("No data available");
+          }
+          }).catch((error) => {
+          console.error(error);
+          });
+      }
+  })
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  var ins = document.getElementById("insert");
+
+  var firName=document.getElementById("exampleInputName1");
+  var lasname=document.getElementById("exampleInputName2");
+  var mobnum=document.getElementById("exampleInputNumber1");
+  var emai=document.getElementById("exampleInputEmail1");
+ // function InsertData(){
+     
+
+  insert.addEventListener('click',(e)=>{
+  e.preventDefault();
+  const user = auth.currentUser;
+  set(ref(database, "users/"+user.uid),{
+          
+          firstname: firName.value,
+          lastname: lasname.value,
+          mobilenumber: mobnum.value,
+          email: emai.value,
+
+  })
+  .then(()=>{
+      alert('DataStored Successfully')
+  })
+  .catch((error)=>{
+      alert("Unsuccessful, error"+error)
+
+  });
+  });
+//}
+ 
+  //ins.addEventListener('click',InsertData);
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+</script>
+</html>
