@@ -1,0 +1,8 @@
+hotelreg
+food
+login
+signup
+checkout
+contact us
+my_order
+search, search4

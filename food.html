@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        <title>Read, Write, Update, Delete Data Firebase 35</title>
+        <style>label{display: inline-block;width: 80px}
+        input,select{width: 120px;}
+        </style>
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <body style="background-color:rgb(25, 25, 25)"><img class="wave" src="images/wave2.png">
+        <div class="container">
+            <div class="img">
+                <img src="images/bg.svg">
+            </div>
+        <div class="login-content" style="position:relative;; ">
+			<form>
+				<img src="images/avatar.svg">
+				<h2 class="title"> Welcome hotel Admin!</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Foodid</h5>
+                                <input id="FoodID" type="text" class="input" >
+           		   </div>
+           		</div>
+                   <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>HotelName</h5>
+                              <input id="HotelName" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="div">
+                            <h5>Hotelid</h5>
+                              <input id="HotelID" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="div">
+                            <h5>Location</h5>
+                              <input id="Location" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>FoodName</h5>
+                              <input id="FoodName" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Price</h5>
+                              <input id="Price" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Image</h5>
+                              <input id="Image1" type="text" class="input" >
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Type</h5>
+                              <input id="Type" type="text" class="input" >
+                    </div>
+                 </div>
+               
+                 </div>
+            </form>
+     
+        <button id="insert" class="btn" style="width: 200px;">INSERT</button>
+        <button id="update" class="btn" style="width: 200px;">UPDATE</button>
+        <!-- <button id="delete" class="btn" style="width: 200px;">DELETE</button> -->
+		
+		
+		<br>
+		<div id="ret-cont"></div>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+           /* const firebaseConfig = {
+              apiKey: "AIzaSyCdnPYIpMZoyDMaCD9F2uVeub4FusU_4DU",
+              authDomain: "storage-251e9.firebaseapp.com",
+              databaseURL: "https://storage-251e9-default-rtdb.firebaseio.com",
+              projectId: "storage-251e9",
+              storageBucket: "storage-251e9.appspot.com",
+              messagingSenderId: "322660487570",
+              appId: "1:322660487570:web:581e195c6a5c52b40a314b"
+            };*/
+			const firebaseConfig = {
+                apiKey: "AIzaSyCan3sUwtdAwRIY3F9LfH-h5UXe5tDC1Ts",
+		authDomain: "hotel-ordering-system-d60d1.firebaseapp.com",
+		databaseURL: "https://hotel-ordering-system-d60d1-default-rtdb.firebaseio.com",
+		projectId: "hotel-ordering-system-d60d1",
+		storageBucket: "hotel-ordering-system-d60d1.appspot.com",
+		messagingSenderId: "111728405719",
+		appId: "1:111728405719:web:b76f8abd3058b913045492"
+			};
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            import {getDatabase, set, ref, get, child, update, remove} 
+            from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+            const database = getDatabase();
+            
+         
+            var HName=document.getElementById("HotelName");
+            var Hid=document.getElementById("HotelID");
+            var Loc=document.getElementById("Location");
+            var FName=document.getElementById("FoodName");
+            var Fid=document.getElementById("FoodID");
+            var Pri=document.getElementById("Price");
+
+            var ins = document.getElementById("insert");
+            var sel = document.getElementById("select");
+            var upd = document.getElementById("update");
+            var del = document.getElementById("delete");
+
+            function InsertData(){
+                if( HName.value=='' || Hid.value=='' || Loc.value=='' || FName.value=='' || Fid.value==''||Pri.value=='' ||Image1.value==''||Type.value=='')
+                alert('Fill all entries')
+                else{
+                set(ref(database, "Food items/"+ Fid.value),{
+                   
+                    restaurant: HName.value,
+                    hid: Hid.value,
+                    location: Loc.value,
+                    fname: FName.value,
+                    fid: Fid.value,
+                    Price: Pri.value,
+                    type:Type.value,
+                    image:Image1.value
+
+
+
+            })
+            .then(()=>{
+                alert('DataStored Successfully')
+            })
+            .catch((error)=>{
+                alert("Unsuccessful, error"+error)
+
+            });
+        }
+        }
+        function SelectData(){
+            const dbref = ref(database);
+			var s = "";
+
+            get(child(dbref,"Food items/"+ Fid.value)).then((snapshot)=>{
+				// console.log(snapshot);
+                if(snapshot.exists()){
+
+                    Hid.value = snapshot.val().hid;
+                    HName.value = snapshot.val().restaurant;
+                    Loc.value=snapshot.val().location;
+                    FName.value = snapshot.val().fname;
+                    Fid.value = snapshot.val().fid;
+                    Pri.value = snapshot.val().Price;
+                    Image1.value=snapshot.val().image;
+                    Type.value=snapshot.val().type;
+
+                    // document.write(snapshot.val().Price);
+					// console.log(snapshot.val());
+					
+					//$("ret-cont").html(s);
+                }
+                else{
+                    alert("No Data Found!")
+                }
+			})
+			.then(data => $("ret-cont").html(s))
+			.catch((error)=>{
+				console.log("select error");
+				alert("Unsuccessful, error"+error);
+
+			});
+
+    }
+
+    function UpdateData(){
+        if( HName.value=='' || Hid.value=='' || Loc.value=='' || FName.value=='' || Fid.value==''||Pri.value=='' ||Image1.value==''||Type.value=='')
+                alert('Fill all entries')
+                else{
+        update(ref(database, "Food items/"+ Fid.value),{
+
+            restaurant: HName.value,
+                    hid: Hid.value,
+                    location: Loc.value,
+                    fname: FName.value,
+                    fid: Fid.value,
+                    Price: Pri.value,
+                    type:Type.value,
+                    image:Image1.value
+
+
+
+            })
+            .then(()=>{
+                alert('Data Updated Successfully')
+            })
+            .catch((error)=>{
+                alert("Unsuccessful, error"+error)
+
+            });        
+        }
+    }
+    function DeleteData(){
+        remove(ref(database, "HotelDetails/"+ Fid.value))
+            .then(()=>{
+                alert('Data Removed Successfully')
+            })
+            .catch((error)=>{
+                alert("Unsuccessful, error"+error)
+
+            });        
+
+    }    
+        ins.addEventListener('click',InsertData);
+        
+        upd.addEventListener('click',UpdateData);
+        del.addEventListener('click',DeleteData);
+            
+             
+            
+
+          </script>
+  
+          
+
+ 
+  <script type="text/javascript" src="js/main1.js"></script>
+
+    </body>
+
+</html>
