@@ -56,7 +56,6 @@
 	</div>
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
-
 			<div class="signup">
 				<form>
 					<label for="chk" aria-hidden="true">Sign up</label>
@@ -70,24 +69,14 @@
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
+					<input id="email" type="email" name="email" placeholder="Email" required="" oninput="checkmail()">
+					<div id="remail">
+					</div>
+					<input id="password" type="password" name="pswd" placeholder="Password" required="">
+					<button onclick="Elogin()">Login</button>
 				</form>
 			</div>
 	</div>
     <script type="text/javascript" src="js/main1.js"></script>
 </body>
-	<script type="module">  
-		let email;
-		login.addEventListener('click',(e)=>{
-		e.preventDefault();
-		email = document.getElementById('email').value;
-		var password = document.getElementById('password').value;
-		console.log(email);
-		console.log(password);
-		alert('User loged in!');
-		window.location.href = "home.html";
-		});
-	</script> 
 </html>
