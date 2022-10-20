@@ -1,0 +1,24 @@
+<!ELEMENT Hungrezy (order*,user*)>
+<!ELEMENT order (userid,status,total,discount,tax,shipping,firstname,lastname,address1,address2,city,state,zip)>
+<!ELEMENT user (firstname,lastname,address1,address2,city,state,zip,email,phone,password_hash,additional_info)>
+<!ATTLIST order id CDATA #REQUIRED>
+<!ATTLIST user id CDATA #REQUIRED>
+<!ELEMENT userid (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ELEMENT tax (#PCDATA)>
+<!ELEMENT shipping (#PCDATA)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT address1 (#PCDATA)>
+<!ELEMENT address2 (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT password_hash (#PCDATA)>
+<!ELEMENT additional_info (#PCDATA)>
+
+    

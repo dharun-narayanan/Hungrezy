@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="order.xsd"?>
+<Hungrezy>
+    <!-- Order Table -->
+    <order id="101">
+        <userid>C001</userid>
+        <status>pending</status>
+        <total>100.00</total>
+        <discount>5.00</discount>
+        <tax>6.00</tax>
+        <shipping>7.00</shipping>
+        <firstname>John</firstname>
+        <lastname>Doe</lastname>
+        <address1>123 Dubai Street</address1>
+        <address2>Apt. 1</address2>
+        <city>CBE</city>
+        <state>TN</state>
+        <zip>123456</zip>
+    </order>
+    <order id="102">
+        <userid>C002</userid>
+        <status>dispatched</status>
+        <total>500.50</total>
+        <discount>2.00</discount>
+        <tax>10.00</tax>
+        <shipping>20.00</shipping>
+        <firstname>Sam</firstname>
+        <lastname>West</lastname>
+        <address1>456 Dubai Street</address1>
+        <address2>Apt. 2</address2>
+        <city>CBE</city>
+        <state>TN</state>
+        <zip>654321</zip>
+    </order>
+    <!-- User Table -->
+    <user id="U001">
+        <firstname>John</firstname>
+        <lastname>Doe</lastname>
+        <address1>123 Dubai Street</address1>
+        <address2>Apt. 1</address2>
+        <city>CBE</city>
+        <state>TN</state>
+        <zip>123456</zip>
+        <email>john@gmail.com</email>
+        <phone>1234567890</phone>
+        <password_hash>rEK1ecacw.7.c</password_hash>
+        <additional_info>Hello World&apos;s</additional_info>
+    </user>
+    <user id="U002">
+        <firstname>Sam</firstname>
+        <lastname>West</lastname>
+        <address1>456 Dubai Street</address1>
+        <address2>Apt. 2</address2>
+        <city>CBE</city>
+        <state>TN</state>
+        <zip>654321</zip>
+        <email>sam@gmail.com</email>
+        <phone>1234567890</phone>
+        <password_hash>rEK1ecacw.7.c</password_hash>
+        <additional_info>Hello World&apos;s</additional_info>
+    </user>
+</Hungrezy>
+  

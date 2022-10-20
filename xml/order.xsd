@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Hungrezy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="userid" type="xs:string" />
+                            <xs:element name="status" type="xs:string" />
+                            <xs:element name="total" type="xs:string" />
+                            <xs:element name="discount" type="xs:string" />
+                            <xs:element name="tax" type="xs:string" />
+                            <xs:element name="shipping" type="xs:string" />
+                            <xs:element name="firstname" type="xs:string" />
+                            <xs:element name="lastname" type="xs:string" />
+                            <xs:element name="address1" type="xs:string" />
+                            <xs:element name="address2" type="xs:string" />
+                            <xs:element name="city" type="xs:string" />
+                            <xs:element name="state" type="xs:string" />
+                            <xs:element name="zip" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="user" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="firstname" type="xs:string" />
+                            <xs:element name="lastname" type="xs:string" />
+                            <xs:element name="address1" type="xs:string" />
+                            <xs:element name="address2" type="xs:string" />
+                            <xs:element name="city" type="xs:string" />
+                            <xs:element name="state" type="xs:string" />
+                            <xs:element name="zip" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="phone" type="xs:string" />
+                            <xs:element name="password_hash" type="xs:string" />
+                            <xs:element name="additional_info" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="id" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
